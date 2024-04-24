@@ -1,11 +1,17 @@
 // Interface for Flight
+
+import java.util.ArrayList;
+import java.util.List;
+
 interface Flight {
+    FlightDetails[] flight = null;
+
     void displayDetails();
 }
 
 // Class to represent a flight
 class FlightDetails implements Flight {
-    private String flightNumber;
+    public String flightNumber;
     private String departure;
     private String destination;
     private int capacity;
@@ -41,7 +47,8 @@ class FlightDetails implements Flight {
 
 // Class to manage flight operations
 public class FlightManager {
-    private List<FlightDetails> flights;
+    public static final FlightDetails[] flight = null;
+    List<FlightDetails> flights;
 
     public FlightManager() {
         flights = new ArrayList<>();

@@ -1,7 +1,6 @@
-import java.io.*;
+import java.io.IOException;
 import java.util.*;
 
-// Main class
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -24,13 +23,16 @@ public class Main {
                     break;
                 case 2:
                     System.out.print("Enter the flight number: ");
-                    String flightNumber = scanner.next();
-                    // Find the flight
-                    for (FlightDetails flight : manager.flights) {
-                        if (flight.flightNumber.equals(flightNumber)) {
+                    String flightNumber = scanner.next().toUpperCase(); // Convert input to uppercase
+                    FlightDetails flight = manager.findFlight(flightNumber);
+                    if (flight != null) {
+                        try {
                             flight.bookSeat();
-                            break;
+                        } catch (IOException e) {
+                            System.out.println("Error occurred while booking seat: " + e.getMessage());
                         }
+                    } else {
+                        System.out.println("Flight not found.");
                     }
                     break;
                 case 3:
