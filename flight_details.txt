@@ -1,1 +1,3 @@
 Flight Number: F101, Departure: Bangkok, Destination: London, Booked Seats: 2, Price per Seat: $20000.0
+Flight Number: F102, Departure: London, Destination: Paris, Booked Seats: 4, Price per Seat: $10000.0
+Flight Number: F101, Departure: Bangkok, Destination: London, Booked Seats: 2, Price per Seat: $20000.0
