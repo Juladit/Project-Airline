@@ -47,7 +47,6 @@ public class FlightManager {
                     FlightDetails flight = new DomesticFlight(flightNumber, departure, destination, capacity, pricePerSeat);
                     addFlight(flight);
                 }
-                // You can add handling for international flights here if needed
             }
         }
     }
